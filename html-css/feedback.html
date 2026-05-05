@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEA KADAI - Order Now</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .card {
+            border-radius: 15px;
+        }
+
+        .title {
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <!-- Header -->
+    <div class="text-center mb-4">
+        <h1 class="title">TEA KADAI</h1>
+        <p class="lead">Premium Tea Lounge ☕</p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card p-4 shadow-lg">
+                <h3 class="text-center mb-3 text-dark">Place Your Order</h3>
+
+                <form>
+
+                    <!-- Name -->
+                    <div class="mb-3">
+                        <label class="form-label text-dark">Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name" required>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="mb-3">
+                        <label class="form-label text-dark">Phone Number</label>
+                        <input type="tel" class="form-control" placeholder="Enter phone number" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label class="form-label text-dark">Email ID</label>
+                        <input type="email" class="form-control" placeholder="Enter email" required>
+                    </div>
+
+                    <!-- Tea Selection -->
+                    <div class="mb-3">
+                        <label class="form-label text-dark">Select Tea</label>
+                        <select class="form-select">
+                            <option>Royal Strong Milk Tea</option>
+                            <option>Premium Masala Tea</option>
+                            <option>Ginger Power Tea</option>
+                            <option>Green Wellness Tea</option>
+                            <option>TEA KADAI Special</option>
+                        </select>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="mb-3">
+                        <label class="form-label text-dark">Quantity</label>
+                        <input type="number" class="form-control" min="1" value="1">
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="d-grid">
+                        <button class="btn btn-dark">Place Order</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-4">
+        <p>© 2026 TEA KADAI | Crafted with Passion</p>
+    </div>
+
+</div>
+
+</body>
+</html>
