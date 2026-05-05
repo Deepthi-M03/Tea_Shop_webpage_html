@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment</title>
+<link rel="stylesheet" href="landing.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Payment</h2>
+
+        <input type="text" id="card" placeholder="Card Number">
+        <input type="text" id="expiry" placeholder="Expiry Date (MM/YY)">
+        <input type="text" id="cvv" placeholder="CVV">
+
+        <button class="btn" onclick="validatePayment()">Pay Now</button>
+    </div>
+
+</div>
+
+<script>
+function validatePayment() {
+    var card = document.getElementById("card").value;
+    var expiry = document.getElementById("expiry").value;
+    var cvv = document.getElementById("cvv").value;
+
+    if(card === "" || expiry === "" || cvv === "") {
+        alert("⚠ Please fill all payment details");
+        return false;
+    }
+
+    if(card.length !== 16 || isNaN(card)) {
+        alert("⚠ Enter valid 16-digit card number");
+        return false;
+    }
+
+    if(cvv.length !== 3 || isNaN(cvv)) {
+        alert("⚠ Enter valid 3-digit CVV");
+        return false;
+    }
+
+    alert("💳 Payment Successful!");
+}
+</script>
+
+</body>
+</html>
