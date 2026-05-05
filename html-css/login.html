@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="landing.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>User Login</h2>
+
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button class="btn" onclick="validateLogin()">Sign In</button>
+
+        <p>OR</p>
+
+        <div class="google-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png">
+            <span>Sign in with Google</span>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function validateLogin() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    if(email === "" || password === "") {
+        alert("⚠ Please fill all fields");
+        return false;
+    }
+
+    if(!email.includes("@")) {
+        alert("⚠ Enter a valid email");
+        return false;
+    }
+
+    alert("✅ Login Successful!");
+}
+</script>
+
+</body>
+</html>
